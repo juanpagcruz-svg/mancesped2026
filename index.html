@@ -1,0 +1,2229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/gif" href="img/escudo.gif">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>C.E.A. Man Cesped | Educación Técnica y Humanística — Cochabamba, Bolivia</title>
+  <meta name="description"
+    content="Centro de Educación Alternativa Man Cesped. 39 años formando profesionales técnicos en Sistemas, Textil y Contaduría. Sé Bachiller en 2 años. ¡Inscripciones abiertas Turno Noche!">
+  <meta name="keywords"
+    content="CEA Man Cesped, educación alternativa, Cochabamba, Valle Hermoso, técnico medio, sistemas informáticos, contaduría, textil, bachillerato adultos, Bolivia, Ley 070">
+  <meta name="author" content="C.E.A. Man Cesped — Equipo Desarrollador: Franco, Jorge, Gualberto, Samuel">
+  <meta property="og:title"
+    content="C.E.A. Man Cesped — ¡Nunca es tarde para estudiar! El saber que ya tienes, ahora con título">
+  <meta property="og:description"
+    content="Formación técnica y humanística para jóvenes y adultos. Título oficial a nivel nacional. Turno Noche en Valle Hermoso, Cochabamba.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/afiche_admision_2026.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LÍNEA TRICOLOR DE IDENTIDAD NACIONAL -->
+  <div class="tricolor-bar" aria-hidden="true"></div>
+
+  <!-- NAVEGACIÓN PRINCIPAL / HEADER (ESCUDO CENTRAL VOLUMINOSO + ÍNDICE REFINADO GOOGLE STYLE) -->
+  <header class="site-header">
+    <div class="header-inner container">
+
+      <!-- BLOQUE IZQUIERDO: BOTÓN PARA DESPLEGAR TODOS LOS APARTADOS -->
+      <div class="header-sections-wrapper">
+        <button class="btn-header-sections" id="btn-header-sections" onclick="toggleSectionsMenu(event)"
+          aria-expanded="false" aria-haspopup="true" title="Ver todos los apartados del sitio">
+          <span class="btn-sections-bars">
+            <span></span><span></span><span></span>
+          </span>
+          <span class="btn-sections-text">Explorar Apartados</span>
+          <svg class="btn-sections-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+
+        <!-- MENÚ DESPLEGABLE ELEGANTE CON TODOS LOS APARTADOS (ORGANIZADO ESTILO GOOGLE) -->
+        <div class="header-sections-dropdown" id="header-sections-dropdown" role="menu">
+          <div class="sections-dropdown-header">
+            <strong>📑 Mapa de Apartados del C.E.A.</strong>
+            <span>Acceso directo a las 10 secciones oficiales</span>
+          </div>
+
+          <div class="sections-dropdown-grid">
+            <!-- COLUMNA 1: ACADÉMICO Y CARRERAS -->
+            <div class="sections-dropdown-col">
+              <span class="dropdown-category-title">🎓 Carreras y Talleres</span>
+              <a href="javascript:void(0)" class="dropdown-item"
+                onclick="navigate('inicio', 'oferta'); closeSectionsMenu();">
+                <span class="dropdown-item-title">Oferta Académica 2026</span>
+                <small>Sistemas, Textil, Contaduría y Humanístico</small>
+              </a>
+              <a href="javascript:void(0)" class="dropdown-item"
+                onclick="navigate('inicio', 'visualizador'); closeSectionsMenu();">
+                <span class="dropdown-item-title">Visualizador de Talleres</span>
+                <small>Equipos, laboratorios y fotos</small>
+              </a>
+              <a href="javascript:void(0)" class="dropdown-item"
+                onclick="navigate('inicio', 'plantel'); closeSectionsMenu();">
+                <span class="dropdown-item-title">Plantel Docente</span>
+                <small>Profesores y facilitadores</small>
+              </a>
+              <a href="javascript:void(0)" class="dropdown-item highlight"
+                onclick="navigate('test'); closeSectionsMenu();">
+                <span class="dropdown-item-title">🎯 Test Vocacional</span>
+                <small>Descubre tu carrera ideal</small>
+              </a>
+            </div>
+
+            <!-- COLUMNA 2: INSTITUCIÓN E HISTORIA -->
+            <div class="sections-dropdown-col">
+              <span class="dropdown-category-title">🏛️ Institución e Historia</span>
+              <a href="javascript:void(0)" class="dropdown-item" onclick="navigate('inicio'); closeSectionsMenu();">
+                <span class="dropdown-item-title">Inicio / Portada</span>
+                <small>Presentación y frontis oficial</small>
+              </a>
+              <a href="javascript:void(0)" class="dropdown-item"
+                onclick="navigate('inicio', 'centro'); closeSectionsMenu();">
+                <span class="dropdown-item-title">El Centro (Yachay Wasi)</span>
+                <small>39 años de educación fiscal</small>
+              </a>
+              <a href="javascript:void(0)" class="dropdown-item"
+                onclick="navigate('inicio', 'man-cesped'); closeSectionsMenu();">
+                <span class="dropdown-item-title">¿Quién fue Man Césped?</span>
+                <small>Historia del personaje boliviano</small>
+              </a>
+              <a href="javascript:void(0)" class="dropdown-item"
+                onclick="navigate('inicio', 'historia'); closeSectionsMenu();">
+                <span class="dropdown-item-title">Línea de Tiempo (1987-2026)</span>
+                <small>39 años de trayectoria</small>
+              </a>
+            </div>
+
+            <!-- COLUMNA 3: COMUNIDAD Y CONTACTO -->
+            <div class="sections-dropdown-col">
+              <span class="dropdown-category-title">📍 Comunidad y Servicios</span>
+              <a href="javascript:void(0)" class="dropdown-item"
+                onclick="navigate('inicio', 'galeria'); closeSectionsMenu();">
+                <span class="dropdown-item-title">Galería de Espacios</span>
+                <small>Fotos reales de la sede</small>
+              </a>
+              <a href="javascript:void(0)" class="dropdown-item"
+                onclick="navigate('inicio', 'faq'); closeSectionsMenu();">
+                <span class="dropdown-item-title">Preguntas Frecuentes</span>
+                <small>Inscripciones, costos y turnos</small>
+              </a>
+              <a href="javascript:void(0)" class="dropdown-item"
+                onclick="navigate('inicio', 'contacto'); closeSectionsMenu();">
+                <span class="dropdown-item-title">Contacto y Ubicación</span>
+                <small>Mapa, teléfonos y dirección</small>
+              </a>
+              <a href="javascript:void(0)" class="dropdown-item highlight-afiche"
+                onclick="openAficheModal(); closeSectionsMenu();">
+                <span class="dropdown-item-title">📄 Afiche Oficial 2026</span>
+                <small>Requisitos y convocatoria</small>
+              </a>
+            </div>
+          </div>
+
+          <div class="sections-dropdown-footer">
+            <span>¿Consultas o inscripciones?</span>
+            <a href="https://wa.me/59172272179?text=Hola%20Secretar%C3%ADa%20CEA%20Man%20C%C3%A9sped,%20deseo%20m%C3%A1s%20informaci%C3%B3n."
+              target="_blank" rel="noopener noreferrer" class="btn-dropdown-wa">
+              💬 Chatear con Secretaría
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENTRO DE TODO: ESCUDO OFICIAL DEL CEA VOLUMINOSO Y PROTAGÓNICO -->
+      <a href="javascript:void(0)" class="brand-crest-center" onclick="navigate('inicio')"
+        aria-label="C.E.A. Man Césped - Inicio">
+        <div class="crest-volumetric-badge">
+          <div class="crest-volumetric-ring"></div>
+          <img src="img/escudo.png" alt="Escudo Institucional C.E.A. Man Césped" class="crest-volumetric-img" width="72"
+            height="72">
+        </div>
+        <div class="crest-center-label">
+          <span class="crest-label-title">C.E.A. MAN CÉSPED</span>
+          <span class="crest-label-sub">COCHABAMBA • 1987-2026</span>
+        </div>
+      </a>
+
+      <!-- BLOQUE DERECHO: ACCIONES LIMPIAS ESTILO GOOGLE -->
+      <div class="header-actions-desktop">
+        <button class="btn-google-subtle btn-header-action" onclick="openAficheModal()" title="Ver Afiche Oficial 2026">
+          <span class="btn-ic">📄</span>
+          <span>Afiche 2026</span>
+        </button>
+        <button class="btn-google-subtle btn-header-action" onclick="navigate('test')" title="Test Vocacional">
+          <span class="btn-ic">🎯</span>
+          <span>Test Vocacional</span>
+        </button>
+      </div>
+
+      <!-- MARCA COMPACTA EXCLUSIVA PARA MÓVIL (IZQUIERDA) -->
+      <a href="javascript:void(0)" class="header-mobile-brand" onclick="navigate('inicio')"
+        aria-label="C.E.A. Man Césped - Inicio">
+        <div class="mob-brand-crest">
+          <img src="img/escudo.png" alt="Escudo CEA Man Césped" width="32" height="32">
+        </div>
+        <div class="mob-brand-text">
+          <span class="mob-brand-title">C.E.A. MAN CÉSPED</span>
+          <span class="mob-brand-sub">Turno Noche • 1987-2026</span>
+        </div>
+      </a>
+
+      <!-- CONTROLES MÓVILES (Visibles solo en pantallas pequeñas) -->
+      <div class="header-mobile-right">
+        <button class="btn-mobile-action btn-mobile-afiche" onclick="openAficheModal()"
+          title="Ver Convocatoria y Afiche Oficial 2026" aria-label="Ver Afiche Oficial 2026">
+          <span class="btn-ic">📄</span>
+          <span class="btn-label">Afiche</span>
+        </button>
+        <button class="btn-mobile-action btn-mobile-test" onclick="navigate('test')"
+          title="Iniciar Test Vocacional Interactivo" aria-label="Iniciar Test Vocacional">
+          <span class="btn-ic">🎯</span>
+          <span class="btn-label">Test</span>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación" onclick="toggleMobileNav()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- VISTA 1: PÁGINA DE INICIO (LANDING PAGE UNIFICADA) -->
+  <!-- ======================================================== -->
+  <main id="view-landing" class="view-page active">
+
+    <!-- SECCIÓN 0: HERO REDISEÑADO CON ALTO IMPACTO VISUAL -->
+    <section class="hero-section" id="inicio">
+      <div class="container">
+
+
+
+        <div class="hero-modern-card">
+
+          <!-- SPOTLIGHT DEL ESCUDO INSTITUCIONAL (PARTE SUPERIOR DEL HERO - GRANDE Y PROTAGÓNICO) -->
+          <div class="hero-crest-spotlight">
+            <div class="hero-crest-badge">
+              <div class="hero-crest-img-wrap">
+                <img src="img/escudo.png" alt="Escudo Oficial Institucional C.E.A. Man Cesped" class="hero-crest-img"
+                  width="210" height="210">
+              </div>
+              <div class="hero-crest-meta">
+                <span class="crest-kicker">IDENTIDAD INSTITUCIONAL • COCHABAMBA</span>
+                <h2 class="crest-name">C.E.A. MAN CESPED</h2>
+                <p class="crest-pillars">TRABAJO • CONOCIMIENTO • ÉXITO</p>
+                <p class="crest-quechua">«Llamk'ay • Yachay • Atipay»</p>
+                <div class="crest-legal-tags">
+                  <span class="crest-tag">R.M. 1040/2022</span>
+                  <span class="crest-tag">Ley Avelino Siñani N.° 070</span>
+                  <span class="crest-tag highlight">100% Gratuito y Fiscal</span>
+                  <span class="crest-tag">Turno Noche: 18:30 a 22:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-grid">
+            <div class="hero-content">
+
+              <div class="hero-badges-row">
+                <span class="wedu-pill wedu-pill-yellow">⚡ ¡Inscripciones Abiertas! 1.er Semestre 2026</span>
+                <span class="wedu-pill wedu-pill-mint">🎓 Título Oficial del Estado Plurinacional</span>
+              </div>
+
+              <!-- TÍTULO EN 3 LÍNEAS DE ALTO IMPACTO (ESTILO WEDU WIX TEMPLATE) -->
+              <h1 class="hero-title wedu-hero-title">
+                <span class="wedu-title-line">Trabajo.</span>
+                <span class="wedu-title-line">Conocimiento.</span>
+                <span class="wedu-title-line wedu-title-accent">Éxito.</span>
+              </h1>
+
+              <p class="hero-quechua-main">«Llamk'ayqa kawsayta mirachin, yachayqa ñanta k'ancharin, atipayqa sumaq
+                kawsayman pusan.»</p>
+
+              <p class="hero-desc">
+                <strong>¡Nunca es tarde para estudiar!</strong> El saber y la experiencia que ya tienes, ahora con
+                título de Técnico Medio o Bachiller en 2 años. 39 años formando profesionales en Valle Hermoso con
+                educación fiscal gratuita en horarios nocturnos compatibles con tu empleo y familia.
+              </p>
+              <p class="hero-quechua-sub">«Kimsa chunka jisq'unniyuq wata llaqtapaq llamk'aspa, waynakunapaq
+                kurakkunapaqwan kikin yachay wasi.»</p>
+
+              <!-- DETALLES DESTACADOS TIPO AFICHE -->
+              <div class="hero-feature-tags">
+                <div class="feat-tag">
+                  <strong>2 SEMESTRES / AÑO</strong>
+                  <span>Titulación Modular Escalonada</span>
+                </div>
+                <div class="feat-tag">
+                  <strong>¡BACHILLER EN 2 AÑOS!</strong>
+                  <span>Primaria (EPA) y Secundaria (ESA)</span>
+                </div>
+                <div class="feat-tag">
+                  <strong>TÉCNICO MEDIO (2.000 hrs)</strong>
+                  <span>Sistemas, Textil y Contaduría</span>
+                </div>
+              </div>
+
+              <div class="hero-buttons">
+                <a href="javascript:void(0)" class="btn btn-wedu-black" onclick="navigate('inicio', 'oferta')">
+                  Ver Oferta Académica 2026 &rarr;
+                </a>
+                <button class="btn btn-wedu-yellow" onclick="navigate('test')">
+                  🎯 Iniciar Test Vocacional
+                </button>
+                <button class="btn btn-wedu-outline btn-hero-afiche" onclick="openAficheModal()">
+                  📄 Afiche Oficial 2026
+                </button>
+              </div>
+            </div>
+
+            <div class="hero-image-wrap">
+              <div class="hero-img-badge-top">
+                <img src="img/escudo.png" alt="Escudo CEA" width="42" height="42">
+                <div>
+                  <strong>C.E.A. MAN CÉSPED</strong>
+                  <span>Frontis Oficial • Sede U.E. Siglo XX</span>
+                </div>
+              </div>
+              <img src="img/campus_colegio.jpg"
+                alt="Frontis y Fachada Principal del C.E.A. Man Césped en la U.E. Siglo XX (Valle Hermoso)"
+                class="hero-img" width="580" height="440" loading="eager">
+              <div class="hero-floating-badge">
+                <strong>Frontis Principal • Sede Institucional</strong>
+                <span>Av. Los Ángeles entre Pedro Toledo y Diego Benavides</span>
+                <small>«Turno Noche: 18:30 a 22:00 • 39 Wata Yachay Wasi»</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA DE FILTRO FLOTANTE -->
+        <div class="hero-floating-filter">
+          <div class="floating-filter-grid">
+            <div class="filter-group">
+              <label for="hero-filter-area">Área de Interés / Munaña Yachay</label>
+              <select id="hero-filter-area" class="filter-select">
+                <option value="all">Todas las Opciones Vigentes (4)</option>
+                <option value="tecnico">Técnico Medio (2 Años • 2.000 hrs)</option>
+                <option value="humanistico">¡Sé Bachiller en: 2 Años! (Humanístico)</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="hero-filter-turno">Horario de Clases / Pacha</label>
+              <select id="hero-filter-turno" class="filter-select">
+                <option value="all">Turno Noche (18:30 a 22:00) Presencial</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="hero-filter-duracion">Certificación / Título</label>
+              <select id="hero-filter-duracion" class="filter-select">
+                <option value="all">Título Oficial del Ministerio de Educación (Ley 070)</option>
+              </select>
+            </div>
+            <button class="btn-filter-search" onclick="searchCareersFromHero()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              <span>Buscar Carrera</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- APARTADO MOBILE: HUB DE ACCESO RÁPIDO PARA DISPOSITIVOS MÓVILES -->
+    <!-- ======================================================== -->
+    <!-- ======================================================== -->
+    <!-- APARTADO MOBILE: MARCO DE SMARTPHONE 16:9 CON ACCESO CENTRALIZADO -->
+    <!-- ======================================================== -->
+    <section class="mobile-app-hub-section" id="apartado-movil" aria-label="Pantalla del Apartado Móvil">
+      <div class="container">
+
+        <!-- CABECERA DE PREVISUALIZACIÓN (Desktop Showcase) -->
+        <div class="mobile-hub-desktop-intro text-center">
+          <span class="hub-preview-badge">📱 PREVISUALIZADOR MÓVIL 16:9 • ACCESO RÁPIDO</span>
+          <h2 class="mobile-preview-title">Pantalla del Apartado Móvil</h2>
+          <p class="mobile-preview-subtitle">Optimizado para smartphones en formato 16:9 • Navegación centralizada y
+            acceso inmediato</p>
+        </div>
+
+        <!-- MARCO DE CELULAR (SMARTPHONE 16:9 DEVICE FRAME) -->
+        <div class="smartphone-device-frame">
+
+          <!-- BISEL SUPERIOR: ISLA DINÁMICA CON CÁMARA Y BOCINA -->
+          <div class="phone-dynamic-island">
+            <span class="phone-camera-lens"></span>
+            <span class="phone-speaker-bar"></span>
+          </div>
+
+          <!-- BARRA DE ESTADO DEL CELULAR (HORA, WI-FI, BATERÍA) -->
+          <div class="phone-status-bar">
+            <span class="phone-status-time" id="phone-live-time">18:30</span>
+            <div class="phone-status-icons">
+              <span class="status-icon" title="Señal 5G">📶</span>
+              <span class="status-icon" title="Wi-Fi">🛜</span>
+              <span class="status-icon" title="Batería 100%">🔋</span>
+            </div>
+          </div>
+
+          <!-- PANTALLA INTERIOR DEL CELULAR -->
+          <div class="smartphone-screen-content">
+
+            <!-- 1. ENCABEZADO CENTRALIZADO: LOGO AL MEDIO (PRIORIDAD PRINCIPAL) -->
+            <div class="phone-crest-hero-center">
+              <div class="phone-crest-badge-wrap">
+                <div class="phone-crest-glow"></div>
+                <img src="img/escudo.png" alt="Escudo Oficial C.E.A. Man Césped" class="phone-crest-img" width="84"
+                  height="84">
+              </div>
+              <h3 class="phone-brand-title">C.E.A. MAN CÉSPED</h3>
+              <p class="phone-brand-sub">Educación Técnica & Humanística Fiscal</p>
+              <div class="phone-badge-pill">
+                <span class="hub-live-dot"></span>
+                <span>Turno Noche • 18:30 a 22:00 • Valle Hermoso</span>
+              </div>
+            </div>
+
+            <!-- 2. APARTADOS PRIORITARIOS JUSTO ABAJO DEL LOGO (TEST VOCACIONAL Y AFICHE) -->
+            <div class="phone-priority-actions">
+              <!-- PRIORIDAD 1: TEST VOCACIONAL -->
+              <button class="phone-action-card card-test" onclick="navigate('test')" title="Iniciar Test Vocacional">
+                <div class="action-card-icon">🎯</div>
+                <div class="action-card-text">
+                  <span class="action-card-title">Test Vocacional Interactivo</span>
+                  <span class="action-card-desc">Descubre tu carrera ideal en 2 min (CHASIDE)</span>
+                </div>
+                <span class="action-card-arrow">&rarr;</span>
+              </button>
+
+              <!-- PRIORIDAD 2: AFICHE OFICIAL 2026 -->
+              <button class="phone-action-card card-afiche" onclick="openAficheModal()"
+                title="Ver Afiche Oficial de Admisión">
+                <div class="action-card-icon">📄</div>
+                <div class="action-card-text">
+                  <span class="action-card-title">Afiche Oficial Convocatoria 2026</span>
+                  <span class="action-card-desc">Requisitos, carreras y titulación ministerial</span>
+                </div>
+                <span class="action-card-arrow">&rarr;</span>
+              </button>
+
+              <!-- PRIORIDAD 3: OFERTA ACADÉMICA -->
+              <button class="phone-action-card card-carreras" onclick="navigate('inicio', 'oferta')"
+                title="Ver Oferta Académica">
+                <div class="action-card-icon">🎓</div>
+                <div class="action-card-text">
+                  <span class="action-card-title">Nuestra Oferta Académica 2026</span>
+                  <span class="action-card-desc">Sistemas, Textil, Contaduría y Bachiller</span>
+                </div>
+                <span class="action-card-arrow">&rarr;</span>
+              </button>
+            </div>
+
+            <!-- 3. FILTROS RÁPIDOS POR CATEGORÍA -->
+            <div class="phone-hub-filter-bar">
+              <span class="filter-bar-label">Explorar apartados:</span>
+              <div class="mobile-hub-filter-pills" role="tablist" aria-label="Filtro rápido móvil">
+                <button class="hub-pill active" onclick="filterMobileHub('all', this)" role="tab" aria-selected="true">
+                  ⚡ Todos
+                </button>
+                <button class="hub-pill" onclick="filterMobileHub('academico', this)" role="tab" aria-selected="false">
+                  🎓 Carreras
+                </button>
+                <button class="hub-pill" onclick="filterMobileHub('institucional', this)" role="tab"
+                  aria-selected="false">
+                  🏛️ El Centro
+                </button>
+                <button class="hub-pill" onclick="filterMobileHub('tramites', this)" role="tab" aria-selected="false">
+                  📋 Servicios
+                </button>
+              </div>
+            </div>
+
+            <!-- 4. GRILLA INTERACTIVA CENTRALIZADA DE TODOS LOS APARTADOS -->
+            <div class="mobile-hub-grid" id="mobile-hub-grid">
+              <!-- 1. CARRERAS -->
+              <a href="javascript:void(0)" class="mobile-hub-tile tile-carreras" data-cat="academico"
+                onclick="navigate('inicio', 'oferta')">
+                <div class="tile-icon-circle">
+                  <span>🎓</span>
+                </div>
+                <div class="tile-text">
+                  <span class="tile-title">Carreras 2026</span>
+                  <span class="tile-caption">Sistemas, Textil, Contaduría</span>
+                </div>
+                <span class="tile-arrow">›</span>
+              </a>
+
+              <!-- 2. AFICHE OFICIAL 2026 -->
+              <a href="javascript:void(0)" class="mobile-hub-tile tile-afiche" data-cat="tramites"
+                onclick="openAficheModal()">
+                <div class="tile-icon-circle">
+                  <span>📄</span>
+                </div>
+                <div class="tile-text">
+                  <span class="tile-title">Afiche Oficial</span>
+                  <span class="tile-caption">Requisitos y convocatoria</span>
+                </div>
+                <span class="tile-arrow">›</span>
+              </a>
+
+              <!-- 3. TEST VOCACIONAL -->
+              <a href="javascript:void(0)" class="mobile-hub-tile tile-test" data-cat="academico"
+                onclick="navigate('test')">
+                <div class="tile-icon-circle">
+                  <span>🎯</span>
+                </div>
+                <div class="tile-text">
+                  <span class="tile-title">Test Vocacional</span>
+                  <span class="tile-caption">Descubre tu vocación (CHASIDE)</span>
+                </div>
+                <span class="tile-arrow">›</span>
+              </a>
+
+              <!-- 4. VISUALIZADOR DE TALLERES -->
+              <a href="javascript:void(0)" class="mobile-hub-tile tile-talleres" data-cat="academico"
+                onclick="navigate('inicio', 'visualizador')">
+                <div class="tile-icon-circle">
+                  <span>🔬</span>
+                </div>
+                <div class="tile-text">
+                  <span class="tile-title">Aulas y Equipos</span>
+                  <span class="tile-caption">Visualizador de talleres</span>
+                </div>
+                <span class="tile-arrow">›</span>
+              </a>
+
+              <!-- 5. HISTORIA DE MAN CÉSPED -->
+              <a href="javascript:void(0)" class="mobile-hub-tile tile-mancesped" data-cat="institucional"
+                onclick="navigate('inicio', 'man-cesped')">
+                <div class="tile-icon-circle">
+                  <span>✍️</span>
+                </div>
+                <div class="tile-text">
+                  <span class="tile-title">¿Quién fue Man Césped?</span>
+                  <span class="tile-caption">El poeta y pensador boliviano</span>
+                </div>
+                <span class="tile-arrow">›</span>
+              </a>
+
+              <!-- 6. FACHADA Y GALERÍA -->
+              <a href="javascript:void(0)" class="mobile-hub-tile tile-galeria" data-cat="institucional"
+                onclick="navigate('inicio', 'galeria')">
+                <div class="tile-icon-circle">
+                  <span>📸</span>
+                </div>
+                <div class="tile-text">
+                  <span class="tile-title">Frontis y Fotos</span>
+                  <span class="tile-caption">Fachada de la U.E. Siglo XX</span>
+                </div>
+                <span class="tile-arrow">›</span>
+              </a>
+
+              <!-- 7. PREGUNTAS FRECUENTES -->
+              <a href="javascript:void(0)" class="mobile-hub-tile tile-faq" data-cat="tramites"
+                onclick="navigate('inicio', 'faq')">
+                <div class="tile-icon-circle">
+                  <span>❓</span>
+                </div>
+                <div class="tile-text">
+                  <span class="tile-title">Preguntas Frecuentes</span>
+                  <span class="tile-caption">Inscripciones, turnos y costos</span>
+                </div>
+                <span class="tile-arrow">›</span>
+              </a>
+
+              <!-- 8. CONTACTO Y UBICACIÓN -->
+              <a href="javascript:void(0)" class="mobile-hub-tile tile-contacto" data-cat="tramites"
+                onclick="navigate('inicio', 'contacto')">
+                <div class="tile-icon-circle">
+                  <span>🗺️</span>
+                </div>
+                <div class="tile-text">
+                  <span class="tile-title">Cómo Llegar</span>
+                  <span class="tile-caption">Valle Hermoso, Av. Los Ángeles</span>
+                </div>
+                <span class="tile-arrow">›</span>
+              </a>
+            </div>
+
+            <!-- 5. SIMULADOR INTERACTIVO DE ELECCIÓN RÁPIDA 2026 -->
+            <div class="mobile-hub-simulador">
+              <div class="simulador-head">
+                <span class="simulador-badge">💡 SIMULADOR INTERACTIVO 2026</span>
+                <h4 class="simulador-title">¿Cuál es tu objetivo este año?</h4>
+                <p class="simulador-desc">Toca una opción para ver la titulación oficial y contactar a Secretaría:</p>
+              </div>
+
+              <div class="simulador-tabs" role="tablist">
+                <button class="sim-tab active" id="sim-tab-bachiller" onclick="setSimuladorGoal('bachiller', this)">
+                  🎓 Ser Bachiller
+                </button>
+                <button class="sim-tab" id="sim-tab-tecnico" onclick="setSimuladorGoal('tecnico', this)">
+                  💼 Oficio Técnico
+                </button>
+                <button class="sim-tab" id="sim-tab-test" onclick="setSimuladorGoal('test', this)">
+                  🎯 No sé qué estudiar
+                </button>
+              </div>
+
+              <div class="simulador-result-card" id="simulador-result-card">
+                <!-- Renderizado interactivo por setSimuladorGoal() -->
+              </div>
+            </div>
+
+            <!-- 6. CONTACTO DIRECTO CON SECRETARÍA (WHATSAPP 72272179) -->
+            <div class="mobile-hub-actions-bar">
+              <a href="https://wa.me/59172272179?text=Hola%20Secretar%C3%ADa%20del%20CEA%20Man%20C%C3%A9sped,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20inscripciones%20y%20carreras."
+                target="_blank" rel="noopener noreferrer" class="hub-btn-wa">
+                <div class="hub-btn-text">
+                  <span class="hub-btn-title">💬 WhatsApp Secretaría General</span>
+                  <small class="hub-btn-sub">Edith Mendoza • Atención Inmediata</small>
+                </div>
+                <strong class="hub-wa-number">72272179</strong>
+              </a>
+
+              <div class="hub-secondary-actions">
+                <a href="tel:+59172272179" class="hub-btn-call" title="Llamar directamente a Secretaría">
+                  <span>📞 Llamar: 72272179</span>
+                </a>
+                <button class="hub-btn-afiche" onclick="openAficheModal()">
+                  <span>📄 Ver Afiche Convocatoria</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- BARRA INFERIOR DE GESTOS (HOME INDICATOR DEL SMARTPHONE) -->
+          <div class="phone-home-indicator">
+            <span class="home-indicator-bar"></span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- ======================================================== -->
+    <!-- SECCIÓN 01: NUESTRA OFERTA ACADÉMICA 2026 (CARRERAS VIGENTES) -->
+    <!-- ======================================================== -->
+    <section class="careers-section" id="oferta">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">EDUCACIÓN TÉCNICA Y HUMANÍSTICA VIGENTE</span>
+          <p class="quechua-trans">«Kunan pacha ruray yachaykuna, runa kay yachaywan»</p>
+          <h2 class="section-title">Nuestra Oferta Académica 2026</h2>
+          <p class="quechua-sub">«2026 watapaq yachay ñankunanchik»</p>
+          <p class="section-lead">Programas modulares progresivos bajo normativa R.M. 1040/2022 del Ministerio de
+            Educación de Bolivia.</p>
+
+          <div class="filter-tabs" id="filter-tabs">
+            <button class="filter-btn active" data-filter="all">Todas las carreras (4)</button>
+            <button class="filter-btn" data-filter="tecnico">Técnico Medio (3)</button>
+            <button class="filter-btn" data-filter="humanistico">¡Bachiller en 2 Años!</button>
+          </div>
+        </div>
+
+        <div class="careers-grid" id="careers-grid">
+          <!-- Renderizado dinámico de las 4 carreras activas por app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECCIÓN 01.5: VISUALIZADOR INTERACTIVO DE TALLERES Y TECNOLOGÍA -->
+    <!-- ======================================================== -->
+    <section class="visualizer-section" id="visualizador">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">VISOR INTERACTIVO DE TALLERES Y TECNOLOGÍA</span>
+          <p class="quechua-trans">«Yachay k'itikunata qhaway — Laboratorios, equipamiento y proyectos en acción»</p>
+          <h2 class="section-title">Visualizador de Talleres y Laboratorios</h2>
+          <p class="quechua-sub">«Ruray yachay k'itinchikkuna, antañiqiy llamk'anakunawan»</p>
+          <p class="section-lead">Explora interactivamente nuestras aulas especializadas, el equipamiento técnico real y
+            los proyectos socioproductivos desarrollados por los estudiantes en el turno noche.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Selector de Especialidades / Espacios -->
+        <div class="vis-tabs-nav" id="vis-tabs-nav" role="tablist">
+          <button class="vis-tab-btn active" role="tab" aria-selected="true" data-space="sistemas"
+            onclick="selectVisualizerSpace('sistemas')">
+            <span class="vis-tab-icon">💻</span>
+            <span class="vis-tab-name">Sistemas Informáticos</span>
+            <small class="vis-tab-quechua">Antañiqiy Kamay</small>
+          </button>
+          <button class="vis-tab-btn" role="tab" aria-selected="false" data-space="textil"
+            onclick="selectVisualizerSpace('textil')">
+            <span class="vis-tab-icon">🧵</span>
+            <span class="vis-tab-name">Textil y Confección</span>
+            <small class="vis-tab-quechua">P'acha Ruray</small>
+          </button>
+          <button class="vis-tab-btn" role="tab" aria-selected="false" data-space="contaduria"
+            onclick="selectVisualizerSpace('contaduria')">
+            <span class="vis-tab-icon">📊</span>
+            <span class="vis-tab-name">Contaduría General</span>
+            <small class="vis-tab-quechua">Yuyay Yapay</small>
+          </button>
+          <button class="vis-tab-btn" role="tab" aria-selected="false" data-space="humanistico"
+            onclick="selectVisualizerSpace('humanistico')">
+            <span class="vis-tab-icon">📚</span>
+            <span class="vis-tab-name">Bachillerato Humanístico</span>
+            <small class="vis-tab-quechua">Wayna Machu Yachay</small>
+          </button>
+          <button class="vis-tab-btn" role="tab" aria-selected="false" data-space="campus"
+            onclick="selectVisualizerSpace('campus')">
+            <span class="vis-tab-icon">🏟️</span>
+            <span class="vis-tab-name">Campus & Coliseo</span>
+            <small class="vis-tab-quechua">Kuraq Yachaywasi</small>
+          </button>
+        </div>
+
+        <!-- Tarjeta de Visualización Interactiva (Wix WeDu Style) -->
+        <div class="vis-showcase-card" id="vis-showcase-card">
+          <div class="vis-grid">
+
+            <!-- Columna Izquierda: Visor Multimedia con Miniaturas -->
+            <div class="vis-media-col">
+              <div class="vis-image-frame" id="vis-image-frame">
+                <img src="img/sistemas_lab_oficial.jpg" id="vis-main-img"
+                  alt="Laboratorio Central de Sistemas Informáticos" class="vis-main-img"
+                  onclick="openVisualizerModal()">
+                <div class="vis-badge-overlay">
+                  <span class="vis-live-tag">🔴 ESPACIO REAL ACTIVO</span>
+                  <span class="vis-turn-tag">🌙 Turno Noche 18:30 - 22:00</span>
+                </div>
+                <!-- CONTROLES INTERACTIVOS DE NAVEGACIÓN DE FOTOS -->
+                <button class="vis-nav-btn vis-prev-btn" onclick="prevVisualizerImage(event)" aria-label="Foto anterior"
+                  title="Foto anterior">‹</button>
+                <button class="vis-nav-btn vis-next-btn" onclick="nextVisualizerImage(event)"
+                  aria-label="Foto siguiente" title="Foto siguiente">›</button>
+                <button class="vis-zoom-btn" onclick="openVisualizerModal()"
+                  title="Ampliar imagen en pantalla completa">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    <line x1="11" y1="8" x2="11" y2="14" />
+                    <line x1="8" y1="11" x2="14" y2="11" />
+                  </svg>
+                  <span>Ampliar Foto</span>
+                </button>
+              </div>
+
+              <p class="vis-caption-text" id="vis-space-caption">
+                Vista panorámica del Laboratorio Central de Computación con estaciones de trabajo individuales y
+                pizarrón técnico.
+              </p>
+
+              <!-- Miniaturas para alternar fotos del mismo espacio -->
+              <div class="vis-thumbs-wrapper">
+                <span class="vis-thumbs-label">📷 Vistas y Prácticas Disponibles (Haz clic para alternar imagen):</span>
+                <div class="vis-thumbs-grid" id="vis-thumbs-grid">
+                  <!-- Inyectado dinámicamente por app.js -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Ficha Técnica, Equipamiento y Proyectos Socioproductivos -->
+            <div class="vis-info-col">
+              <div class="vis-info-header">
+                <div class="vis-title-badge-row">
+                  <span class="vis-resolucion-tag" id="vis-resolucion-tag">R.M. 1040/2022 • Título de Técnico
+                    Medio</span>
+                  <span class="vis-hours-tag" id="vis-hours-tag">2.000 Horas</span>
+                </div>
+                <h3 class="vis-space-title" id="vis-space-title">Laboratorio de Sistemas Informáticos</h3>
+                <p class="vis-space-quechua" id="vis-space-quechua">«Antañiqiy Kamay llamk'ana wasi — Allin yachay»</p>
+                <p class="vis-space-desc" id="vis-space-desc">
+                  Espacio tecnológico acondicionado para la formación práctica en soporte técnico de computadoras, redes
+                  cableadas y WiFi, desarrollo de aplicaciones web y proyectos digitales socioproductivos.
+                </p>
+              </div>
+
+              <!-- Tarjetas Informativas Estilo WeDu -->
+              <div class="vis-detail-cards">
+
+                <!-- Tarjeta 1: Equipamiento Técnico -->
+                <div class="vis-spec-card">
+                  <div class="vis-card-head">
+                    <span class="vis-card-icon">🖥️</span>
+                    <h4>Equipamiento y Recursos Disponibles</h4>
+                  </div>
+                  <p class="vis-card-quechua">«Llamk'anapaq allinchisqa kaqkuna»</p>
+                  <ul class="vis-list" id="vis-equipment-list">
+                    <li>Computadoras de escritorio para ensamblaje, soporte y mantenimiento preventivo.</li>
+                    <li>Monitores y periféricos completos en cada estación individual.</li>
+                    <li>Red de datos cableada LAN y conectividad WiFi para laboratorios de redes.</li>
+                    <li>Herramientas especializadas de ensamble, crimpado UTP y testers de conectividad.</li>
+                    <li>Pizarrón de diagramación lógica para algoritmos y bases de datos relacionales.</li>
+                  </ul>
+                </div>
+
+                <!-- Tarjeta 2: Habilidades Prácticas -->
+                <div class="vis-spec-card">
+                  <div class="vis-card-head">
+                    <span class="vis-card-icon">⚙️</span>
+                    <h4>Habilidades Prácticas Desarrolladas</h4>
+                  </div>
+                  <p class="vis-card-quechua">«Makipiwan umapiwan yachasqakuna»</p>
+                  <div class="vis-chips-grid" id="vis-skills-grid">
+                    <span class="vis-chip">Soporte Técnico de PCs</span>
+                    <span class="vis-chip">Redes Cableadas & WiFi</span>
+                    <span class="vis-chip">Desarrollo Web Frontend</span>
+                    <span class="vis-chip">Bases de Datos Relacionales</span>
+                    <span class="vis-chip">Ofimática Empresarial</span>
+                    <span class="vis-chip">Mantenimiento Preventivo</span>
+                  </div>
+                </div>
+
+                <!-- Tarjeta 3: Proyectos Socioproductivos Reales (PSP) -->
+                <div class="vis-spec-card highlight">
+                  <div class="vis-card-head">
+                    <span class="vis-card-icon">💡</span>
+                    <h4>Proyectos Socioproductivos en Marcha (PSP)</h4>
+                  </div>
+                  <p class="vis-card-quechua">«Llaqtapaq sumaq rurasqakuna»</p>
+                  <p class="vis-psp-desc" id="vis-psp-desc">
+                    Los estudiantes de Sistemas Informáticos desarrollaron este sitio web oficial institucional como
+                    proyecto socioproductivo real, además de brindar soporte técnico a microempresas y unidades
+                    educativas de Valle Hermoso.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Acciones del Visor -->
+              <div class="vis-actions-row">
+                <button class="vis-btn-primary" id="vis-btn-detail" onclick="openDetail('sistemas')">
+                  📚 Ver Malla Curricular Completa
+                </button>
+                <a href="https://wa.me/59172272179?text=Hola%20Secretar%C3%ADa%20del%20CEA%20Man%20C%C3%A9sped,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20talleres%20y%20laboratorios"
+                  target="_blank" rel="noopener noreferrer" class="vis-btn-outline">
+                  💬 Consultar a Secretaría
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- ACCESOS RÁPIDOS Y METAS FORMATIVAS -->
+    <!-- ======================================================== -->
+    <section class="quick-paths-section">
+      <div class="container">
+        <div class="quick-paths-grid">
+          <div class="quick-card" onclick="filterAndScroll('humanistico')">
+            <div class="quick-card-num">01</div>
+            <h3 class="quick-card-title">¡Sé Bachiller en 2 Años!</h3>
+            <p class="quick-card-quechua">«Iskay watallapi bachiller kayta hap'iy»</p>
+            <p class="quick-card-desc">Completa tu primaria o secundaria de adultos en horarios nocturnos compatibles
+              con tu empleo y responsabilidades familiares.</p>
+            <span class="quick-card-link">Ver plan humanístico &rarr;</span>
+          </div>
+          <div class="quick-card" onclick="filterAndScroll('tecnico')">
+            <div class="quick-card-num">02</div>
+            <h3 class="quick-card-title">Certificar Oficio Técnico</h3>
+            <p class="quick-card-quechua">«Llamk'ay yachayniykita sut'inchay»</p>
+            <p class="quick-card-desc">Obtén tu título de Técnico Medio en Sistemas Informáticos (2.000 hrs), Confección
+              Textil o Contaduría General.</p>
+            <span class="quick-card-link">Explorar carreras &rarr;</span>
+          </div>
+          <div class="quick-card" onclick="navigate('test')">
+            <div class="quick-card-num">03</div>
+            <h3 class="quick-card-title">Test Vocacional Interactivo</h3>
+            <p class="quick-card-quechua">«Mayqin yachaymanchus sunquyki rin chayta riqsiy»</p>
+            <p class="quick-card-desc">¿Indeciso? Descubre tu vocación con el Test Rápido (2 min) o el Test Psicotécnico
+              CHASIDE Oficial de 98 preguntas.</p>
+            <span class="quick-card-link">Iniciar test orientativo &rarr;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECCIÓN 02: EL CENTRO (NUESTRA IDENTIDAD Y TRAYECTORIA) -->
+    <!-- ======================================================== -->
+    <section class="institution-section" id="centro">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">NUESTRA IDENTIDAD Y TRAYECTORIA</span>
+          <p class="quechua-trans">«Kikin kayninchik, kawsayninchikwan»</p>
+          <h2 class="section-title">Una institución hecha para quien no pudo estudiar antes</h2>
+          <p class="quechua-sub">«Ñawpaqpi mana yachaqayta atiqkunapaq kichasqa yachay wasi»</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="institution-grid">
+          <div class="institution-text">
+            <p>
+              El <strong>Centro de Educación Alternativa "Man Cesped"</strong> es una institución fiscal fundada en 1987
+              en Cochabamba con la noble misión de abrir las puertas del conocimiento a personas jóvenes y adultas
+              trabajadoras.
+            </p>
+            <p>
+              En el año 2000 adopta con orgullo el nombre del ilustre poeta, periodista y educador cochabambino
+              <strong>Manuel Céspedes ("Man Césped")</strong>, y desde 2007 funciona en las amplias instalaciones de la
+              <strong>Unidad Educativa Siglo XX</strong> en Valle Hermoso.
+            </p>
+            <p>
+              Bajo los artículos 16, 19 y 23 de la <strong>Ley 070 "Avelino Siñani - Elizardo Pérez"</strong> y la
+              <strong>R.M. 1040/2022</strong>, articulamos saberes empíricos con rigor técnico para otorgar títulos
+              oficiales con valor legal para la inserción laboral y el Vivir Bien.
+            </p>
+            <div class="institution-stats">
+              <div class="stat-box">
+                <span class="stat-number">39</span>
+                <span class="stat-label">Años de Servicio (1987–2026)</span>
+                <small>«Kimsa chunka jisq'un wata»</small>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">2 Años</span>
+                <span class="stat-label">Titulación Técnica y Bachiller</span>
+                <small>«Iskay watallapi»</small>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Educación Gratuita y Fiscal</span>
+                <small>«Mana qullqillapaq»</small>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">Ley 070</span>
+                <span class="stat-label">Títulos Oficiales del Ministerio</span>
+                <small>«Kamachiy hunt'asqa»</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="institution-media">
+            <img src="img/campus_hero_panoramica.jpg" alt="Instalaciones del CEA Man Cesped en Valle Hermoso"
+              class="campus-img" width="540" height="360" loading="lazy">
+            <div class="campus-caption">
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  style="vertical-align:middle; margin-right:4px;">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg> Infraestructura U.E. Siglo XX – Av. Los Ángeles entre Pedro Toledo y Diego Benavides, Valle
+                Hermoso</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EMBLEMA Y ESCUDO OFICIAL DESTACADO -->
+        <div class="institution-emblem-showcase">
+          <div class="emblem-card">
+            <div class="emblem-img-wrap">
+              <img src="img/escudo.png" alt="Escudo Oficial del CEA Man Cesped" class="emblem-big-img" width="220"
+                height="220">
+            </div>
+            <div class="emblem-details">
+              <span class="emblem-tag">NUESTRA IDENTIDAD INSTITUCIONAL</span>
+              <h3>Escudo Oficial del C.E.A. "Man Césped"</h3>
+              <p class="emblem-quechua">«Yachay wasinchikpa unanchan • Llamk'ay, Yachay, Atipay»</p>
+              <p>Nuestro escudo oficial representa la fuerza de la educación técnica-humanística en Cochabamba: los
+                <strong>engranajes</strong> simbolizan la industrialización, la técnica y el esfuerzo de los
+                participantes trabajadores; los <strong>colores patrios</strong> reafirman nuestro compromiso con el
+                Estado Plurinacional de Bolivia; y en su centro flamean nuestros tres pilares irrenunciables:
+                <strong>Trabajo, Conocimiento y Éxito</strong>, honrando la memoria del ilustre poeta y educador Manuel
+                Céspedes ("Man Césped").</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECCIÓN 02.5: BIOGRAFÍA HISTÓRICA DE MAN CÉSPED (PATRIMONIO CULTURAL DE BOLIVIA) -->
+    <!-- ======================================================== -->
+    <section class="cesped-history-section" id="man-cesped">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle google-badge-blue">PATRIMONIO CULTURAL Y LITERARIO DE BOLIVIA</span>
+          <p class="quechua-trans">«Man Césped kawsaynin — Allpa munakuq, llamp'u sunqu qillqaq»</p>
+          <h2 class="section-title">¿Quién fue Man Césped? — El Poeta de la Naturaleza y el Esfuerzo Boliviano</h2>
+          <p class="quechua-sub">«Pikataq karqa Manuel Céspedes? Yachay wasinchikpa sutinpa paqariynin»</p>
+          <p class="section-lead">Conoce la vida, obra y sensibilidad del ilustre escritor cochabambino <strong>Manuel
+              Céspedes Anzoleaga (1874–1932)</strong>, cuyo legado de amor a la tierra y trabajo digno inspira la misión
+            formadora de nuestro Centro de Educación Alternativa.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="cesped-grid">
+
+          <!-- TARJETA 1: RETRATO HISTÓRICO Y CÉLEBRE INVOCACIÓN LÍRICA -->
+          <div class="cesped-card cesped-card-portrait">
+            <div class="cesped-portrait-wrapper">
+              <img src="img/man_cesped.jpg" alt="Retrato histórico de Manuel Céspedes Anzoleaga (Man Césped)"
+                class="cesped-portrait-img" width="340" height="420" loading="lazy">
+              <div class="cesped-portrait-badge">
+                <span>1874 – 1932 • Cochabamba</span>
+              </div>
+            </div>
+            <div class="cesped-quote-box">
+              <div class="quote-icon" aria-hidden="true">“</div>
+              <blockquote class="cesped-quote-text">
+                «Madre naturaleza, vuélveme árbol; para que las aves aniden en mis ramas, el caminante descanse bajo mi
+                sombra y mis hojas caigan bendiciendo la tierra.»
+              </blockquote>
+              <cite class="cesped-quote-author">— Manuel Céspedes («Man Césped»)</cite>
+              <p class="cesped-quote-note">Por su última voluntad, sus restos descansan bajo un ceibo florecido en la
+                tierra cochabambina que tanto amó.</p>
+            </div>
+          </div>
+
+          <!-- TARJETA 2: BIOGRAFÍA, RAÍCES Y EL "TAGORE BOLIVIANO" -->
+          <div class="cesped-card cesped-card-bio">
+            <div class="cesped-card-head">
+              <span class="cesped-pill pill-blue">Vida y Filosofía</span>
+              <h3>El Místico Andino y Floricultor del Valle</h3>
+            </div>
+            <div class="cesped-card-body">
+              <p>
+                <strong>Manuel Céspedes Anzoleaga</strong> nació el 1 de enero de 1874 en Canamachi, en las proximidades
+                de <strong>Tarata (Cochabamba)</strong>. De origen humilde y espíritu visionario, unió durante toda su
+                existencia dos pasiones inquebrantables: el cultivo paciente de flores y hortalizas con sus propias
+                manos y la creación de una prosa poética de hondura universal.
+              </p>
+              <p>
+                Vivió largas temporadas de retiro contemplativo en los bosques húmedos de <strong>Colomi y
+                  Paracti</strong>, conviviendo con las comunidades quechuas y escuchando el rumor de los valles. Por su
+                devoción a toda forma de vida, la crítica literaria boliviana (incluyendo a <strong>Carlos
+                  Medinaceli</strong> y <strong>Enrique Finot</strong>) lo consagró con reverencia como <strong>«El
+                  Rabindranath Tagore de Bolivia»</strong> y el San Francisco de Asís de nuestras letras.
+              </p>
+
+              <div class="cesped-timeline-mini">
+                <div class="mini-event">
+                  <span class="mini-year">1874</span>
+                  <div class="mini-desc"><strong>Cuna Rural en Canamachi (Tarata):</strong> Crece en el campo
+                    cochabambino forjando su sensibilidad hacia la tierra y el trabajo manual.</div>
+                </div>
+                <div class="mini-event">
+                  <span class="mini-year">1907</span>
+                  <div class="mini-desc"><strong>Pionero en el Trópico:</strong> Publica <em>«Viaje al Chimoré»</em>,
+                    deslumbrante expedición lírica a la Amazonía boliviana.</div>
+                </div>
+                <div class="mini-event">
+                  <span class="mini-year">1924–1930</span>
+                  <div class="mini-desc"><strong>Cumbres de la Prosa Poética:</strong> Edita <em>«Símbolos
+                      profanos»</em> y <em>«Sol y horizontes»</em>, himnos a la fraternidad cósmica.</div>
+                </div>
+                <div class="mini-event">
+                  <span class="mini-year">1932</span>
+                  <div class="mini-desc"><strong>Eternidad:</strong> Fallece en Cochabamba, dejando un testamento de
+                    paz, ecología y amor al prójimo.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TARJETA 3: OBRAS CUMBRES EN LA LITERATURA BOLIVIANA -->
+          <div class="cesped-card cesped-card-works">
+            <div class="cesped-card-head">
+              <span class="cesped-pill pill-green">Producción Literaria</span>
+              <h3>Obras Fundamentales de Man Césped</h3>
+            </div>
+            <div class="cesped-works-grid">
+              <div class="work-item">
+                <div class="work-icon">🌿</div>
+                <div class="work-details">
+                  <h4>Viaje al Chimoré (1907)</h4>
+                  <p>Crónica lírico-geográfica y pionera exploración de la selva cochabambina. Un canto a los ríos
+                    caudalosos y la majestuosidad de la flora tropical.</p>
+                </div>
+              </div>
+              <div class="work-item">
+                <div class="work-icon">🕊️</div>
+                <div class="work-details">
+                  <h4>Símbolos Profanos (1924)</h4>
+                  <p>Poemas en prosa donde dialoga con el viento, las piedras y las criaturas sencillas. Joya
+                    estilística de la literatura boliviana del siglo XX.</p>
+                </div>
+              </div>
+              <div class="work-item">
+                <div class="work-icon">☀️</div>
+                <div class="work-details">
+                  <h4>Sol y Horizontes (1930)</h4>
+                  <p>Meditaciones panteístas de madurez. Homenaje al campesino sembrador, la dignidad del sudor honrado
+                    y la serenidad de la montaña.</p>
+                </div>
+              </div>
+              <div class="work-item">
+                <div class="work-icon">🐓</div>
+                <div class="work-details">
+                  <h4>El Gallo Conchinchino</h4>
+                  <p>Cuento clásico de la narrativa criolla boliviana, cargado de ternura rural, humor costumbrista y
+                    fraternal respeto hacia los animales.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TARJETA 4: POR QUÉ NUESTRO C.E.A. LLEVA SU NOMBRE (EL LEGADO VIVO) -->
+          <div class="cesped-card cesped-card-legacy">
+            <div class="cesped-card-head">
+              <span class="cesped-pill pill-yellow">Identidad Institucional</span>
+              <h3>¿Por qué Nuestro Centro se Llama «Man Césped»?</h3>
+            </div>
+            <div class="cesped-legacy-content">
+              <p>
+                En el año 2000, los maestros y vecinos de Valle Hermoso bautizaron oficialmente este Centro con el
+                nombre de <strong>Man Césped</strong>. Su vida ejemplifica las tres columnas que guían la educación
+                alternativa en Bolivia:
+              </p>
+              <div class="legacy-pillars-list">
+                <div class="pillar-box">
+                  <div class="pillar-icon">🌱</div>
+                  <div>
+                    <strong>La Dignidad del Trabajo Práctico:</strong>
+                    <p>Man Césped sembró la tierra de día y cultivó las letras de noche. De igual manera, nuestros
+                      estudiantes trabajan en el día y se capacitan técnicamente en el turno noche.</p>
+                  </div>
+                </div>
+                <div class="pillar-box">
+                  <div class="pillar-icon">💡</div>
+                  <div>
+                    <strong>Florecer a Cualquier Edad:</strong>
+                    <p>Así como las flores del valle brotan en su propio tiempo, el saber no caduca. Aquí nunca es tarde
+                      para titularte como Técnico Medio o Bachiller.</p>
+                  </div>
+                </div>
+                <div class="pillar-box">
+                  <div class="pillar-icon">🤝</div>
+                  <div>
+                    <strong>Compromiso con Nuestra Tierra:</strong>
+                    <p>Formamos profesionales en Sistemas Informáticos, Textil y Contaduría con conciencia comunitaria y
+                      amor a Cochabamba y Bolivia.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 03: PLANTEL DOCENTE Y AUTORIDADES (SIN TELÉFONOS PRIVADOS) -->
+    <section class="staff-section" id="plantel">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">EQUIPO HUMANO Y VOCACIÓN PEDAGÓGICA</span>
+          <p class="quechua-trans">«Sunqumanta yachachiqkuna, llaqta yanapaqkuna»</p>
+          <h2 class="section-title">Plantel Directivo, Docente y Administrativo</h2>
+          <p class="quechua-sub">«Yachachiqkuna, pusaqkuna llamk'aq masikunawan»</p>
+          <p class="section-lead">Autoridades y facilitadores con vocación de servicio para el turno noche. Consultas y
+            atención a través de Secretaría General.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="staff-filter-tabs">
+          <button class="staff-filter-btn active" onclick="filterStaff('all', this)">Todo el Personal (11)</button>
+          <button class="staff-filter-btn" onclick="filterStaff('directivo', this)">Dirección Institucional</button>
+          <button class="staff-filter-btn" onclick="filterStaff('administrativo', this)">Secretaría General</button>
+          <button class="staff-filter-btn" onclick="filterStaff('docente', this)">Docentes Facilitadores (9)</button>
+        </div>
+
+        <div class="staff-grid" id="staff-grid">
+          <!-- Renderizado dinámico por app.js con privacidad protegida -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 04: GALERÍA DE FOTOS REALES Y VIDA EN EL CEA -->
+    <section class="gallery-section" id="galeria">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">VIDA INSTITUCIONAL EN VALLE HERMOSO</span>
+          <p class="quechua-trans">«Valle Hermoso k'itipi sapa ch'isi kawsayninchik»</p>
+          <h2 class="section-title">Nuestras Instalaciones y Talleres en Acción</h2>
+          <p class="quechua-sub">«Yachay wasinchikpa wasinkuna llamk'ana k'itikunawan»</p>
+          <p class="section-lead">Fotografías reales de nuestras actividades pedagógicas, aulas prácticas y afiche
+            oficial 2026.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="gal-filter-tabs">
+          <button class="gal-filter-btn active" data-filter="all">Todas las Fotos</button>
+          <button class="gal-filter-btn" data-filter="campus">🏛️ Fachada y Espacios Comunes</button>
+          <button class="gal-filter-btn" data-filter="talleres">💻 Talleres y Prácticas</button>
+          <button class="gal-filter-btn" data-filter="afiche">📄 Afiche de Convocatoria</button>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Renderizado dinámico por app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 05: HISTORIA (LÍNEA DE TIEMPO) -->
+    <section class="timeline-section" id="historia">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">39 AÑOS DE RESILIENCIA Y COMPROMISO</span>
+          <p class="quechua-trans">«Kimsa chunka jisq'unniyuq wata llaqtanchikpaq llamk'aspa»</p>
+          <h2 class="section-title">Nuestra Historia (1987 – 2026)</h2>
+          <p class="quechua-sub">«Ñawpa kawsayninchik (1987 – 2026 watakunamanta)»</p>
+          <p class="section-lead">Desliza para recorrer los hitos institucionales verificados del CEA Man Césped.</p>
+          <div class="timeline-swipe-hint" aria-hidden="true">
+            <span class="swipe-hand">👉</span> Desliza horizontalmente para explorar los 39 años (1987 – 2026) <span
+              class="swipe-hand">👈</span>
+          </div>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-track" id="timeline-track">
+            <div class="timeline-item">
+              <div class="timeline-badge">1987</div>
+              <div class="timeline-content">
+                <span class="timeline-tag">Fundación</span>
+                <h4 class="timeline-title">CEMA "Cerro Verde"</h4>
+                <p>Nace en la zona Cerro Verde impartiendo nivel humanístico (Medio Común y Medio Superior) para
+                  responder a jóvenes y adultos trabajadores.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-badge">2000</div>
+              <div class="timeline-content">
+                <span class="timeline-tag">Identidad Oficial</span>
+                <h4 class="timeline-title">Nombre "Man Césped"</h4>
+                <p>Resolución Administrativa de funcionamiento y adopción del nombre del célebre poeta cochabambino
+                  Manuel Céspedes. Se abren talleres de Corte y Confección.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-badge">2007</div>
+              <div class="timeline-content">
+                <span class="timeline-tag">Traslado</span>
+                <h4 class="timeline-title">U.E. Siglo XX</h4>
+                <p>La institución se traslada a la infraestructura de la Unidad Educativa Siglo XX en Valle Hermoso para
+                  acoger a mayor cantidad de participantes nocturnos.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-badge">2011</div>
+              <div class="timeline-content">
+                <span class="timeline-tag">Equipamiento Técnico</span>
+                <h4 class="timeline-title">Maquinaria Industrial</h4>
+                <p>Retorna y se consolida el área técnica con modernas máquinas industriales rectas y overlock
+                  entregadas por Desarrollo Humano.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item current-year">
+              <div class="timeline-badge">2026</div>
+              <div class="timeline-content">
+                <span class="timeline-tag active">39° Aniversario</span>
+                <h4 class="timeline-title">Consolidación Curricular</h4>
+                <p>Mallas curriculares actualizadas a Técnico Medio (R.M. 1040/2022) en Sistemas, Textil y Contaduría,
+                  junto al Bachillerato en 2 años bajo el Modelo Sociocomunitario Productivo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 06: PILARES INSTITUCIONALES -->
+    <section class="identity-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">PILARES INSTITUCIONALES</span>
+          <p class="quechua-trans">«Yachay wasipa hatun takyachiqninkuna»</p>
+          <h2 class="section-title">Trabajo • Conocimiento • Éxito</h2>
+          <p class="quechua-sub">«Llamk'ay • Yachay • Atipay»</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-box">
+            <div class="value-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+              </svg>
+            </div>
+            <h3>Trabajo / Llamk'ay</h3>
+            <p>Dignificamos el oficio productivo de cada participante como motor de superación familiar y comunitaria.
+            </p>
+          </div>
+          <div class="value-box">
+            <div class="value-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+              </svg>
+            </div>
+            <h3>Conocimiento / Yachay</h3>
+            <p>Complementamos los saberes cotidianos y empíricos con rigor científico, metodológico y tecnológico
+              actualizado.</p>
+          </div>
+          <div class="value-box">
+            <div class="value-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+            </div>
+            <h3>Éxito / Atipay</h3>
+            <p>Títulos oficiales con valor legal curricular que habilitan la inserción laboral digna y el Vivir Bien.
+            </p>
+          </div>
+        </div>
+
+        <div class="mission-vision-grid">
+          <div class="mv-card">
+            <h3>Misión / Ruwananchik</h3>
+            <p>Atender integralmente las necesidades y expectativas educativas de jóvenes y adultos mediante una
+              formación técnica-humanística y productiva, validando sus saberes previos y fortaleciendo la inserción
+              laboral y el desarrollo regional.</p>
+          </div>
+          <div class="mv-card">
+            <h3>Visión / Rikurinanchik</h3>
+            <p>Ser un Centro de Educación Alternativa líder en Cochabamba, reconocido por su calidad pedagógica,
+              inclusión social y la formación de profesionales técnicos emprendedores.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 07: PREGUNTAS FRECUENTES -->
+    <section class="faq-section" id="faq">
+      <div class="container max-800">
+        <div class="section-header text-center">
+          <span class="section-subtitle">RESOLVEMOS TUS DUDAS</span>
+          <p class="quechua-trans">«Tukuy tapukuykunaykiman allin kutichiy»</p>
+          <h2 class="section-title">Preguntas Frecuentes</h2>
+          <p class="quechua-sub">«Sapa kuti tapukusqakuna»</p>
+          <p class="section-lead">Todo lo que necesitas saber para estudiar en el CEA Man Cesped en la gestión 2026.</p>
+        </div>
+
+        <!-- BUSCADOR INTERACTIVO EN TIEMPO REAL DE PREGUNTAS FRECUENTES -->
+        <div class="faq-search-wrapper">
+          <div class="faq-search-box">
+            <span class="faq-search-icon">🔍</span>
+            <input type="text" id="faq-search-input"
+              placeholder="Buscar preguntas (ej: requisitos, título, turno noche, costos, edad)..."
+              oninput="searchFaq(this.value)">
+            <button class="faq-search-clear" id="faq-search-clear" onclick="clearFaqSearch()" style="display:none;"
+              aria-label="Limpiar búsqueda">&times;</button>
+          </div>
+          <div class="faq-search-status" id="faq-search-status">5 preguntas frecuentes disponibles</div>
+        </div>
+
+        <div class="accordion" id="faq-accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>¿Cuáles son los requisitos exactos de inscripción?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Requisitos indispensables: 1) Fotocopia simple de Cédula de Identidad vigente; 2) Certificado de
+                Nacimiento original o fotocopia; 3) Libreta del último curso aprobado o certificado de estudios previos.
+                Edad mínima: 15 años cumplidos.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>¿Los títulos tienen valor oficial y reconocimiento nacional?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>¡Totalmente! Todos los títulos y certificados son otorgados por el <strong>Ministerio de Educación del
+                  Estado Plurinacional de Bolivia</strong> amparados por la Ley 070 y la R.M. 1040/2022, habilitándote
+                para el ejercicio profesional formal y la continuidad universitaria.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>¿Cuál es el horario de clases y modalidades?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Las clases son presenciales en el <strong>Turno Noche (18:30 a 22:00, Lunes a Viernes)</strong>,
+                pensado y adaptado especialmente para quienes trabajan durante el día o tienen responsabilidades en el
+                hogar.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>¿Tiene algún costo mensual o de matrícula?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>La educación en el CEA Man Cesped es <strong>100% gratuita</strong> al ser una institución del sistema
+                fiscal boliviano. No se cobra matrícula ni mensualidades. Los participantes solo gestionan sus insumos
+                de práctica personal en talleres específicos.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>¿Cómo funciona el Bachillerato en 2 Años?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>El ciclo de Educación Secundaria de Adultos (ESA) está estructurado en módulos semestrales acelerados,
+                permitiendo a quienes no terminaron el colegio obtener el <strong>Diploma de Bachiller en Humanidades en
+                  tan solo 2 años</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 08: CONTACTO Y UBICACIÓN REAL -->
+    <section class="contact-section" id="contacto">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="section-subtitle">CANALES DE ATENCIÓN DIRECTA</span>
+            <p class="quechua-trans">«Kikinmanta parlapayanapaq ñankuna»</p>
+            <h2 class="section-title">Visítanos o Comunícate con Nosotros</h2>
+            <p class="quechua-sub">«Watukamuwayku chayri willayta mañakuwayku»</p>
+            <p class="contact-lead">Atención personalizada en Secretaría y Dirección de lunes a viernes en el turno
+              noche.</p>
+
+            <ul class="contact-details">
+              <li>
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <strong>Dirección Institucional:</strong>
+                  <p>U.E. Siglo XX, Av. Los Ángeles entre Pedro Toledo y Diego Benavides, Valle Hermoso, Cercado – Cochabamba, Bolivia.
+                    <br>
+                    <a href="https://maps.app.goo.gl/cJK1sgpDnfFSXKEv8" target="_blank" rel="noopener noreferrer" class="link-bold map-inline-link">📍 Abrir en Google Maps (Cómo llegar) &rarr;</a>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                </div>
+                <div>
+                  <strong>Horario de Clases y Atención:</strong>
+                  <p>Lunes a Viernes de 18:30 a 22:00 (Turno Noche).</p>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </div>
+                <div>
+                  <strong>Secretaría General (Edith Mendoza):</strong>
+                  <p>WhatsApp / Llamadas: <a href="https://wa.me/59172272179" target="_blank"
+                      class="link-bold">72272179</a> • Correo: edithmendoza827@gmail.com</p>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </div>
+                <div>
+                  <strong>Dirección Institucional (Ruben Vargas):</strong>
+                  <p>WhatsApp / Celular: <a href="https://wa.me/59171791522" target="_blank"
+                      class="link-bold">71791522</a> • Correo: epemf.nebur@gmail.com</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="social-buttons">
+              <a href="https://wa.me/59172272179?text=Hola%20Secretar%C3%ADa%20CEA%20Man%20Cesped,%20deseo%20informaci%C3%B3n%20sobre%20las%20inscripciones%202026."
+                target="_blank" class="social-btn wa">WhatsApp Secretaría (72272179)</a>
+              <a href="https://wa.me/59171791522?text=Hola%20Direcci%C3%B3n%20CEA%20Man%20Cesped,%20deseo%20consultar%20sobre%20la%20oferta%20acad%C3%A9mica."
+                target="_blank" class="social-btn wa">WhatsApp Dirección (71791522)</a>
+              <a href="https://www.facebook.com/share/1S9QHabs7u/" target="_blank" class="social-btn fb">Facebook
+                Oficial</a>
+            </div>
+          </div>
+
+          <div class="map-wrapper">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.9!2d-66.1217746!3d-17.4334905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e3719ef5df48b7%3A0x7d4501f84ecfa61!2sHV8H%2BJ65%2C%20Pedro%20de%20Toledo%2C%20Cochabamba!5e0!3m2!1ses!2sbo!4v1710000000000"
+                width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación oficial del CEA Man Cesped en Valle Hermoso, Cochabamba">
+              </iframe>
+            </div>
+            <div class="map-cta-bar">
+              <a href="https://maps.app.goo.gl/cJK1sgpDnfFSXKEv8" target="_blank" rel="noopener noreferrer" class="btn btn-google-primary btn-open-map">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span>📍 Abrir ubicación exacta en Google Maps (GPS y Cómo llegar)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- VISTA 2: DETALLE DE CARRERA / OFERTA -->
+  <!-- ======================================================== -->
+  <section id="view-detail" class="view-page">
+    <div class="container">
+      <div class="detail-header-nav">
+        <button class="btn btn-sm btn-back" onclick="navigate('inicio', 'oferta')">&larr; Volver a la oferta
+          académica</button>
+      </div>
+
+      <div class="detail-hero-banner">
+        <span class="pill pill-bolivia" id="detail-pill">Técnico Medio • 2 Años</span>
+        <h1 class="detail-title" id="detail-title">Título de la Carrera</h1>
+        <div class="detail-quechua" id="detail-quechua">Traducción en Quechua</div>
+      </div>
+
+      <div class="detail-tabs-nav" role="tablist">
+        <button class="tab-btn active" data-tab="info" onclick="switchDetailTab('info')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="16" x2="12" y2="12" />
+            <line x1="12" y1="8" x2="12.01" y2="8" />
+          </svg>
+          <span>Información General</span>
+        </button>
+        <button class="tab-btn" data-tab="curriculum" onclick="switchDetailTab('curriculum')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+          </svg>
+          <span>Malla Curricular Oficial</span>
+        </button>
+        <button class="tab-btn" data-tab="gallery" onclick="switchDetailTab('gallery')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <polyline points="21 15 16 10 5 21" />
+          </svg>
+          <span>Taller e Instalaciones</span>
+        </button>
+      </div>
+
+      <div class="detail-tab-panels">
+        <!-- Pestaña 1: Información General -->
+        <div class="tab-panel active" id="tab-panel-info">
+          <div class="detail-layout">
+            <div class="detail-info">
+              <h3 class="panel-subtitle">Descripción del Programa</h3>
+              <p class="detail-desc" id="detail-desc">Descripción completa...</p>
+
+              <div class="detail-specs-box">
+                <h3>Ficha Técnica Oficial del Programa</h3>
+                <ul class="specs-list" id="detail-specs">
+                  <!-- Llenado dinámico -->
+                </ul>
+              </div>
+            </div>
+
+            <div class="detail-sidebar">
+              <div class="sidebar-card">
+                <img src="" alt="Carrera" id="detail-img" class="sidebar-img">
+                <div class="sidebar-content">
+                  <h4>¿Deseas inscribirte a este programa?</h4>
+                  <p>Inscríbete o consulta con secretaría en el turno noche (18:30 a 22:00).</p>
+                  <a href="#" id="detail-wa-btn" target="_blank" class="btn btn-whatsapp w-full">
+                    <span>Inscribirme por WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pestaña 2: Malla Curricular Modular Oficial -->
+        <div class="tab-panel" id="tab-panel-curriculum">
+          <div class="curriculum-container">
+            <h3 class="panel-subtitle">Malla Curricular Modular y Carga Horaria (R.M. 1040/2022)</h3>
+            <p class="panel-lead">Formación estructurada en 4 semestres (20 módulos de 100 horas pedagógicas = 2.000
+              hrs) con certificaciones intermedias.</p>
+            <div class="curriculum-levels" id="detail-curriculum">
+              <!-- Acordeones dinámicos -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Pestaña 3: Taller e Instalaciones -->
+        <div class="tab-panel" id="tab-panel-gallery">
+          <div class="gallery-panel-container">
+            <h3 class="panel-subtitle">Equipamiento y Prácticas Reales</h3>
+            <div class="gallery-showcase-grid">
+              <div class="gallery-photo-card">
+                <img src="" alt="Taller práctico" id="detail-gallery-img" class="gallery-photo-img">
+                <div class="gallery-photo-caption">
+                  <h4 id="detail-gallery-title">Taller Práctico CEA Man Césped</h4>
+                  <p id="detail-gallery-desc">Ambientes equipados para el aprendizaje empírico y técnico.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- VISTA 3: TEST VOCACIONAL (CON INTRODUCCIÓN Y GUÍA CLARA) -->
+  <!-- ======================================================== -->
+  <section id="view-test" class="view-page">
+    <div class="container max-800">
+
+      <!-- PANTALLA INTRODUCTORIA AL TEST VOCACIONAL -->
+      <div class="test-intro-box" id="test-intro-box">
+        <div class="test-intro-badge">ORIENTACIÓN VOCACIONAL • CEA MAN CESPED</div>
+        <h1 class="test-intro-title">¿No sabes qué carrera técnica estudiar?</h1>
+        <p class="test-intro-quechua">«Mayqin yachaymanchus sunquyki rin chayta riqsiy»</p>
+
+        <p class="test-intro-lead">
+          Hemos diseñado este test interactivo para ayudarte a descubrir tus habilidades, intereses laborales y afinidad
+          con nuestra oferta académica 2026 en el CEA Man Césped.
+        </p>
+
+        <!-- TARJETAS COMPARATIVAS DE MODOS -->
+        <div class="test-modes-grid">
+          <div class="test-mode-card quick">
+            <div class="test-mode-icon">⚡</div>
+            <h3>Test Rápido Orientativo</h3>
+            <span class="test-duration-badge">⏱ Tiempo estimado: Menos de 2 minutos</span>
+            <p>Consta de <strong>6 preguntas situacionales</strong> directas. Es ideal si estás navegando desde tu
+              celular o buscas una recomendación rápida entre nuestras 4 carreras.</p>
+            <ul class="test-features-list">
+              <li>• 6 preguntas de selección múltiple</li>
+              <li>• Resultado instantáneo con recomendación directa</li>
+              <li>• Mapeo rápido a Sistemas, Textil, Contaduría o Bachillerato</li>
+            </ul>
+            <button class="btn btn-primary w-full" onclick="startTestExecution('quick')">
+              Comenzar Test Rápido (2 min) &rarr;
+            </button>
+          </div>
+
+          <div class="test-mode-card chaside">
+            <div class="test-mode-icon">🎯</div>
+            <h3>Test CHASIDE Oficial</h3>
+            <span class="test-duration-badge">⏱ Tiempo estimado: 10 a 12 minutos</span>
+            <p>Cuestionario psicotécnico estándar de <strong>98 preguntas de Sí o No</strong>. Mide tus intereses y
+              aptitudes en 7 áreas vocacionales completas.</p>
+            <ul class="test-features-list">
+              <li>• 98 preguntas breves con respuesta Sí / No</li>
+              <li>• Gráfico de barras de afinidad por cada área vocacional</li>
+              <li>• Máxima precisión diagnóstica para tu proyecto de vida</li>
+            </ul>
+            <button class="btn btn-primary btn-test-chaside-cta w-full" onclick="startTestExecution('chaside')">
+              Comenzar Test CHASIDE (98 Preguntas) &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- RECOMENDACIONES CLAVE ANTES DE EMPEZAR -->
+        <div class="test-guide-box">
+          <h4>💡 Puntos importantes antes de responder:</h4>
+          <div class="guide-points-grid">
+            <div class="guide-point">
+              <strong>1. No es un examen:</strong> No hay respuestas buenas ni malas. Responde según lo que realmente te
+              gusta hacer.
+            </div>
+            <div class="guide-point">
+              <strong>2. Totalmente privado:</strong> No necesitas registrarte ni pagar nada. Tu resultado se muestra en
+              pantalla.
+            </div>
+            <div class="guide-point">
+              <strong>3. Conexión directa:</strong> Al terminar podrás consultar por WhatsApp con Secretaría sobre la
+              carrera que te salió.
+            </div>
+            <div class="guide-point">
+              <strong>4. Puedes cambiar de opinión:</strong> Siempre puedes retroceder o repetir el test las veces que
+              desees.
+            </div>
+          </div>
+        </div>
+
+        <div class="test-intro-footer">
+          <button class="btn btn-outline" onclick="navigate('inicio')">&larr; Volver a la página principal</button>
+        </div>
+      </div>
+
+      <!-- PANTALLA DE PREGUNTAS (OCULTA INICIALMENTE) -->
+      <div class="test-question-box" id="test-question-box" style="display:none;">
+        <div class="test-header">
+          <button class="btn-exit-test" onclick="showTestIntro()">&larr; Cambiar de test o salir</button>
+
+          <div class="test-meta-row">
+            <span class="test-mode-badge" id="test-mode-badge">Test Rápido (2 minutos)</span>
+            <div class="test-step-indicator" id="test-indicator">Pregunta 1 de 6</div>
+          </div>
+
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-fill" id="test-progress-bar"></div>
+          </div>
+        </div>
+
+        <h2 class="test-question-title" id="test-question-title">¿Cargando pregunta...?</h2>
+        <div class="test-options-grid" id="test-options-grid"></div>
+
+        <div class="test-nav-actions">
+          <button class="btn btn-sm btn-outline" id="btn-prev-question" onclick="prevQuestion()"
+            style="display:none;">&larr; Pregunta anterior</button>
+          <button class="btn btn-sm btn-outline" id="btn-next-question" onclick="nextQuestion()"
+            style="display:none;">Siguiente pregunta &rarr;</button>
+        </div>
+      </div>
+
+      <!-- PANTALLA DE RESULTADOS (OCULTA INICIALMENTE) -->
+      <div class="test-result-box" id="test-result-box" style="display:none;">
+        <div class="result-trophy">🎓</div>
+        <span class="result-pre" id="result-pre">Tu carrera recomendada es:</span>
+        <h1 class="result-winner-title" id="result-winner-title">Sistemas Informáticos</h1>
+        <p class="result-desc" id="result-desc">Descripción del perfil vocacional detectado...</p>
+
+        <div class="chaside-bars" id="result-bars"></div>
+
+        <div class="result-actions" id="result-actions">
+          <!-- Botones dinámicos generados por app.js -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: AFICHE OFICIAL DE ADMISIONES 2026 -->
+  <!-- ======================================================== -->
+  <div id="afiche-modal" class="modal-overlay" onclick="closeAficheModal(event)" role="dialog" aria-modal="true"
+    aria-labelledby="afiche-modal-title">
+    <div class="modal-content-afiche" onclick="event.stopPropagation()">
+
+      <!-- CABECERA MODAL ESTILO GOOGLE -->
+      <div class="modal-afiche-header">
+        <div class="modal-afiche-title-box">
+          <img src="img/escudo.png" alt="Escudo CEA" class="modal-header-crest" width="42" height="42">
+          <div>
+            <h3 id="afiche-modal-title">Convocatoria Oficial de Admisiones 2026</h3>
+            <span>C.E.A. Man Césped • Turno Noche (18:30 a 22:00)</span>
+          </div>
+        </div>
+        <div class="modal-header-actions">
+          <a href="img/afiche_admision_2026.jpg" target="_blank" rel="noopener noreferrer" class="btn-afiche-zoom"
+            title="Abrir afiche en pantalla completa para zoom">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              <line x1="11" y1="8" x2="11" y2="14" />
+              <line x1="8" y1="11" x2="14" y2="11" />
+            </svg>
+            <span>Ver Completo</span>
+          </a>
+          <button class="modal-close-btn" onclick="closeAficheModal()" aria-label="Cerrar">&times;</button>
+        </div>
+      </div>
+
+      <!-- CUERPO MODAL CON ESPACIO ESPACIOSO Y ELEGANTE -->
+      <div class="modal-afiche-body">
+        <div class="modal-afiche-grid">
+
+          <!-- COLUMNA VISUAL DEL AFICHE -->
+          <div class="modal-afiche-img-container">
+            <a href="img/afiche_admision_2026.jpg" target="_blank" rel="noopener noreferrer"
+              title="Clic para abrir afiche en alta resolución" class="afiche-img-link">
+              <img src="img/afiche_admision_2026.jpg" alt="Afiche Oficial de Inscripciones 2026 - CEA Man Césped"
+                class="modal-afiche-img" loading="eager">
+              <span class="afiche-hover-hint">🔍 Clic para ver en tamaño completo</span>
+            </a>
+          </div>
+
+          <!-- COLUMNA DE INFORMACIÓN Y ACCIONES RÁPIDAS -->
+          <div class="modal-afiche-info-panel">
+            <div class="afiche-info-card">
+              <span class="afiche-pill">⚡ Inscripciones Abiertas 2026</span>
+              <h4 class="afiche-card-title">¡El saber que ya tienes, ahora con título oficial!</h4>
+              <p class="afiche-card-desc">Educación fiscal pública y 100% gratuita para personas jóvenes y adultas.
+                Turno nocturno compatible con tu trabajo y familia.</p>
+
+              <div class="afiche-specs-list">
+                <div class="afiche-spec-item">
+                  <span class="spec-ic">🎓</span>
+                  <div>
+                    <strong>Técnico Medio (2 Años • 2.000 hrs)</strong>
+                    <small>Sistemas Informáticos • Confección Textil • Contaduría General</small>
+                  </div>
+                </div>
+                <div class="afiche-spec-item">
+                  <span class="spec-ic">📚</span>
+                  <div>
+                    <strong>¡Sé Bachiller en 2 Años!</strong>
+                    <small>Educación Primaria (EPA) y Secundaria (ESA) de Adultos</small>
+                  </div>
+                </div>
+                <div class="afiche-spec-item">
+                  <span class="spec-ic">📍</span>
+                  <div>
+                    <strong>Sede de Clases</strong>
+                    <small>U.E. Siglo XX, Av. Los Ángeles (Valle Hermoso, Cochabamba)</small>
+                  </div>
+                </div>
+                <div class="afiche-spec-item">
+                  <span class="spec-ic">🌙</span>
+                  <div>
+                    <strong>Horario Nocturno</strong>
+                    <small>Lunes a Viernes de 18:30 a 22:00</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-afiche-actions-box">
+              <span class="afiche-actions-title">¿Tienes dudas o deseas inscribirte hoy?</span>
+              <div class="afiche-cta-btns">
+                <a href="https://wa.me/59172272179?text=Hola%20Secretar%C3%ADa%20CEA%20Man%20C%C3%A9sped,%20vi%20el%20afiche%20oficial%20de%20inscripciones%20y%20deseo%20m%C3%A1s%20informaci%C3%B3n."
+                  target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp w-full">
+                  💬 WhatsApp Secretaría (72272179)
+                </a>
+                <a href="https://wa.me/59171791522?text=Hola%20Direcci%C3%B3n%20CEA%20Man%20C%C3%A9sped,%20deseo%20consultar%20sobre%20las%20carreras%20del%20afiche."
+                  target="_blank" rel="noopener noreferrer" class="btn btn-outline w-full">
+                  💬 WhatsApp Dirección (71791522)
+                </a>
+                <button class="btn btn-google-primary w-full" onclick="closeAficheModal(); navigate('test');">
+                  🎯 Iniciar Test Vocacional (Orientativo)
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: VISOR DE FOTOS DE GALERÍA (LIGHTBOX) -->
+  <!-- ======================================================== -->
+  <div id="photo-modal" class="modal-overlay" onclick="closePhotoModal()">
+    <div class="modal-content-photo" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="closePhotoModal()" aria-label="Cerrar">&times;</button>
+      <button class="photo-modal-nav photo-prev-btn" onclick="prevPhotoModal(event)" aria-label="Foto anterior"
+        title="Foto anterior">‹</button>
+      <button class="photo-modal-nav photo-next-btn" onclick="nextPhotoModal(event)" aria-label="Foto siguiente"
+        title="Foto siguiente">›</button>
+      <img src="" id="photo-modal-img" alt="Foto ampliada del CEA" class="photo-modal-img">
+      <div class="photo-modal-info">
+        <div class="photo-modal-header-row">
+          <h3 id="photo-modal-title">Título de la fotografía</h3>
+          <span id="photo-modal-counter" class="photo-counter-pill">Foto 1 / 1</span>
+        </div>
+        <p id="photo-modal-desc">Descripción...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- BOTÓN FLOTANTE CON POPUP SELECTOR DE WHATSAPP -->
+  <!-- ======================================================== -->
+  <div class="whatsapp-floating-wrap">
+    <div class="wa-popup" id="wa-popup">
+      <div class="wa-popup-header">
+        <img src="img/escudo.png" alt="CEA" width="38" height="38">
+        <div>
+          <strong>Atención CEA Man Césped</strong>
+          <span>Turno Noche • Valle Hermoso</span>
+        </div>
+      </div>
+      <div class="wa-popup-body">
+        <p class="wa-popup-intro">¿Tienes dudas sobre inscripciones o carreras técnicas? Contáctanos de inmediato:</p>
+
+        <a href="https://wa.me/59172272179?text=Hola%20Secretar%C3%ADa%20CEA%20Man%20Cesped,%20deseo%20informaci%C3%B3n%20sobre%20las%20inscripciones%202026."
+          target="_blank" class="wa-chat-link">
+          <div class="wa-chat-avatar">EM</div>
+          <div class="wa-chat-info">
+            <strong>Secretaría General</strong>
+            <span>Edith Mendoza • Cel: 72272179</span>
+            <small>Inscripciones, requisitos y trámites</small>
+          </div>
+        </a>
+
+        <a href="https://wa.me/59171791522?text=Hola%20Direcci%C3%B3n%20CEA%20Man%20Cesped,%20deseo%20consultar%20sobre%20la%20oferta%20acad%C3%A9mica."
+          target="_blank" class="wa-chat-link">
+          <div class="wa-chat-avatar">RV</div>
+          <div class="wa-chat-info">
+            <strong>Dirección Institucional</strong>
+            <span>Ruben Vargas • Cel: 71791522</span>
+            <small>Orientación académica y convalidación</small>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <a href="https://wa.me/59172272179?text=Hola%20Secretar%C3%ADa%20del%20CEA%20Man%20C%C3%A9sped,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20inscripciones%20y%20carreras."
+      target="_blank" rel="noopener noreferrer" class="whatsapp-floating" aria-label="WhatsApp Secretaría Oficial"
+      title="WhatsApp Secretaría (72272179)">
+      💬
+    </a>
+  </div>
+
+  <!-- BOTÓN FLOTANTE VOLVER ARRIBA -->
+  <button class="back-to-top" id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    aria-label="Volver arriba" title="Volver al inicio">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
+  </button>
+
+  <!-- ======================================================== -->
+  <!-- FOOTER INSTITUCIONAL Y CRÉDITOS -->
+  <!-- ======================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-about">
+        <div class="footer-logo-row">
+          <img src="img/escudo.png" alt="Escudo CEA" class="footer-logo" width="56" height="56" loading="lazy">
+          <div>
+            <h4>C.E.A. MAN CESPED</h4>
+            <span>Trabajo • Conocimiento • Éxito</span>
+            <small class="footer-quechua">«Llamk'ay • Yachay • Atipay»</small>
+          </div>
+        </div>
+        <p>Centro de Educación Alternativa de Personas Jóvenes y Adultas. Dependiente de la Dirección Distrital
+          Cochabamba 2 y Ministerio de Educación.</p>
+        <p class="footer-slogan"><em>"¡Nunca es tarde para estudiar!"</em></p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul class="footer-links">
+          <li><a href="javascript:void(0)" onclick="navigate('inicio')">Inicio / Qallariy</a></li>
+          <li><a href="javascript:void(0)" onclick="navigate('inicio', 'centro')">El Centro / Yachay Wasi</a></li>
+          <li><a href="javascript:void(0)" onclick="navigate('inicio', 'man-cesped')">¿Quién fue Man Césped?</a></li>
+          <li><a href="javascript:void(0)" onclick="navigate('inicio', 'oferta')">Oferta Académica</a></li>
+          <li><a href="javascript:void(0)" onclick="navigate('inicio', 'visualizador')">Visualizador de Talleres</a>
+          </li>
+          <li><a href="javascript:void(0)" onclick="navigate('inicio', 'plantel')">Plantel Docente</a></li>
+          <li><a href="javascript:void(0)" onclick="navigate('inicio', 'galeria')">Galería y Fachada</a></li>
+          <li><a href="javascript:void(0)" onclick="navigate('inicio', 'historia')">Historia (39 años)</a></li>
+          <li><a href="javascript:void(0)" onclick="openAficheModal()">Afiche Oficial 2026</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Carreras Vigentes</h4>
+        <ul class="footer-links">
+          <li><a href="javascript:void(0)" onclick="openDetail('sistemas')">Sistemas Informáticos (2.000 hrs)</a></li>
+          <li><a href="javascript:void(0)" onclick="openDetail('textil')">Textil y Confección (2.000 hrs)</a></li>
+          <li><a href="javascript:void(0)" onclick="openDetail('contaduria')">Contaduría General (2.000 hrs)</a></li>
+          <li><a href="javascript:void(0)" onclick="openDetail('humanistico')">¡Sé Bachiller en 2 Años!</a></li>
+          <li><a href="javascript:void(0)" onclick="navigate('test')">Test Vocacional Orientativo</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Equipo Desarrollador</h4>
+        <div class="credits-box">
+          <p class="credits-title">Proyecto Web Educativo desarrollado por:</p>
+          <ul class="credits-team">
+            <li>• Franco</li>
+            <li>• Jorge</li>
+            <li>• Gualberto</li>
+            <li>• Samuel</li>
+          </ul>
+          <span class="credits-sub">Frontend, UX/UI & QA Teams • CEA Man Césped</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 C.E.A. Man Cesped — U.E. Siglo XX, Valle Hermoso, Cochabamba, Bolivia. Todos los derechos
+          reservados.</p>
+        <div class="footer-tricolor-line"></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- DRAWER DE NAVEGACIÓN MÓVIL (APP DRAWER LATERAL REFINADO) -->
+  <!-- ======================================================== -->
+  <div class="nav-backdrop" id="nav-backdrop" onclick="toggleMobileNav(false)"></div>
+
+  <nav class="main-nav" id="main-nav" role="navigation" aria-label="Menú Móvil C.E.A. Man Césped">
+    <div class="mobile-nav-header">
+      <div class="mobile-nav-brand">
+        <div class="mob-drawer-crest-badge">
+          <img src="img/escudo.png" alt="Escudo Oficial CEA Man Césped" width="44" height="44">
+        </div>
+        <div class="mob-drawer-title-group">
+          <strong class="mob-drawer-title">C.E.A. MAN CÉSPED</strong>
+          <span class="mob-drawer-sub">Educación Técnica Gratuita • 1987-2026</span>
+          <span class="mob-drawer-badge-tag">R.M. 1040/2022 • Turno Noche</span>
+        </div>
+      </div>
+      <button class="mobile-nav-close" onclick="toggleMobileNav(false)" aria-label="Cerrar menú">&times;</button>
+    </div>
+
+    <div class="mobile-nav-body">
+      <!-- ENLACE DIRECTO: INICIO -->
+      <div class="mob-drawer-section">
+        <a href="javascript:void(0)" class="nav-link" onclick="navigate('inicio'); toggleMobileNav(false);">
+          <span class="link-ic">🏠</span>
+          <div class="link-text">
+            <span class="link-name">Inicio / Portada</span>
+            <small class="link-desc">Presentación institucional y frontis</small>
+          </div>
+          <span class="link-arrow">›</span>
+        </a>
+      </div>
+
+      <!-- CATEGORÍA 1: ACADÉMICO Y CARRERAS -->
+      <div class="mob-drawer-section">
+        <div class="mob-drawer-cat-header">
+          <span class="mob-cat-icon">🎓</span>
+          <span class="mob-cat-name">Carreras y Formación</span>
+        </div>
+        <a href="javascript:void(0)" class="nav-link" onclick="navigate('inicio', 'oferta'); toggleMobileNav(false);">
+          <span class="link-ic">💼</span>
+          <div class="link-text">
+            <span class="link-name">Oferta Académica 2026</span>
+            <small class="link-desc">Sistemas, Textil, Contaduría y Humanístico</small>
+          </div>
+          <span class="link-arrow">›</span>
+        </a>
+        <a href="javascript:void(0)" class="nav-link"
+          onclick="navigate('inicio', 'visualizador'); toggleMobileNav(false);">
+          <span class="link-ic">🔬</span>
+          <div class="link-text">
+            <span class="link-name">Visualizador de Talleres</span>
+            <small class="link-desc">Aulas equipadas y laboratorios reales</small>
+          </div>
+          <span class="link-arrow">›</span>
+        </a>
+        <a href="javascript:void(0)" class="nav-link" onclick="navigate('inicio', 'plantel'); toggleMobileNav(false);">
+          <span class="link-ic">👥</span>
+          <div class="link-text">
+            <span class="link-name">Plantel Docente</span>
+            <small class="link-desc">Facilitadores y profesores técnicos</small>
+          </div>
+          <span class="link-arrow">›</span>
+        </a>
+        <a href="javascript:void(0)" class="nav-link highlight-test-nav"
+          onclick="navigate('test'); toggleMobileNav(false);">
+          <span class="link-ic">🎯</span>
+          <div class="link-text">
+            <span class="link-name">Test Vocacional Interactivo</span>
+            <small class="link-desc">Descubre tu vocación en 2 minutos</small>
+          </div>
+          <span class="link-arrow">›</span>
+        </a>
+      </div>
+
+      <!-- CATEGORÍA 2: INSTITUCIÓN E HISTORIA -->
+      <div class="mob-drawer-section">
+        <div class="mob-drawer-cat-header">
+          <span class="mob-cat-icon">🏛️</span>
+          <span class="mob-cat-name">Identidad e Historia</span>
+        </div>
+        <a href="javascript:void(0)" class="nav-link" onclick="navigate('inicio', 'centro'); toggleMobileNav(false);">
+          <span class="link-ic">🏫</span>
+          <div class="link-text">
+            <span class="link-name">El Centro (Yachay Wasi)</span>
+            <small class="link-desc">Nuestra identidad y 39 años de servicio</small>
+          </div>
+          <span class="link-arrow">›</span>
+        </a>
+        <a href="javascript:void(0)" class="nav-link"
+          onclick="navigate('inicio', 'man-cesped'); toggleMobileNav(false);">
+          <span class="link-ic">✍️</span>
+          <div class="link-text">
+            <span class="link-name">¿Quién fue Man Césped?</span>
+            <small class="link-desc">Historia del poeta y educador boliviano</small>
+          </div>
+          <span class="link-arrow">›</span>
+        </a>
+        <a href="javascript:void(0)" class="nav-link" onclick="navigate('inicio', 'historia'); toggleMobileNav(false);">
+          <span class="link-ic">📜</span>
+          <div class="link-text">
+            <span class="link-name">Historia Institucional</span>
+            <small class="link-desc">Trayectoria comunitaria (1987–2026)</small>
+          </div>
+          <span class="link-arrow">›</span>
+        </a>
+      </div>
+
+      <!-- CATEGORÍA 3: COMUNIDAD Y CONTACTO -->
+      <div class="mob-drawer-section">
+        <div class="mob-drawer-cat-header">
+          <span class="mob-cat-icon">📍</span>
+          <span class="mob-cat-name">Sede y Orientación</span>
+        </div>
+        <a href="javascript:void(0)" class="nav-link" onclick="navigate('inicio', 'galeria'); toggleMobileNav(false);">
+          <span class="link-ic">📸</span>
+          <div class="link-text">
+            <span class="link-name">Galería y Fachada Real</span>
+            <small class="link-desc">Frontis, coliseo y espacios comunes</small>
+          </div>
+          <span class="link-arrow">›</span>
+        </a>
+        <a href="javascript:void(0)" class="nav-link" onclick="navigate('inicio', 'faq'); toggleMobileNav(false);">
+          <span class="link-ic">❓</span>
+          <div class="link-text">
+            <span class="link-name">Preguntas Frecuentes</span>
+            <small class="link-desc">Requisitos, turnos, costos e inscripción</small>
+          </div>
+          <span class="link-arrow">›</span>
+        </a>
+        <a href="javascript:void(0)" class="nav-link" onclick="navigate('inicio', 'contacto'); toggleMobileNav(false);">
+          <span class="link-ic">🗺️</span>
+          <div class="link-text">
+            <span class="link-name">Contacto y Ubicación</span>
+            <small class="link-desc">Valle Hermoso, Av. Los Ángeles (Mapa)</small>
+          </div>
+          <span class="link-arrow">›</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ACCIONES DIRECTAS EN EL DRAWER -->
+    <div class="mobile-nav-actions">
+      <button class="btn btn-sm btn-google-subtle w-full" onclick="openAficheModal(); toggleMobileNav(false);">
+        📄 Ver Afiche Convocatoria 2026
+      </button>
+      <button class="btn btn-sm btn-google-primary w-full" onclick="navigate('test'); toggleMobileNav(false);">
+        🎯 Iniciar Test Vocacional (Orientativo)
+      </button>
+      <a href="https://wa.me/59172272179?text=Hola%20Secretar%C3%ADa%20del%20CEA%20Man%20C%C3%A9sped,%20deseo%20m%C3%A1s%20informaci%C3%B3n."
+        target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-whatsapp w-full">
+        💬 Chatear con Secretaría (72272179)
+      </a>
+    </div>
+  </nav>
+
+  <!-- ======================================================== -->
+  <!-- BARRA DE NAVEGACIÓN MÓVIL INFERIOR (BOTTOM NAVIGATION BAR) -->
+  <!-- ======================================================== -->
+  <nav class="mobile-bottom-nav" id="mobile-bottom-nav" aria-label="Navegación móvil inferior">
+    <!-- 1. INICIO -->
+    <a href="javascript:void(0)" class="mob-nav-item active" onclick="navigate('inicio')" id="mob-nav-inicio"
+      aria-label="Inicio">
+      <div class="mob-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+      </div>
+      <span class="mob-nav-label">Inicio</span>
+    </a>
+
+    <!-- 2. CARRERAS -->
+    <a href="javascript:void(0)" class="mob-nav-item" onclick="navigate('inicio', 'oferta')" id="mob-nav-oferta"
+      aria-label="Carreras Técnicas">
+      <div class="mob-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+          <path d="M6 12v5c3 3 9 3 12 0v-5" />
+        </svg>
+      </div>
+      <span class="mob-nav-label">Carreras</span>
+    </a>
+
+    <!-- 3. ESCUDO CENTRAL VOLUMINOSO (EL LOGO ABAJO) -->
+    <a href="javascript:void(0)" class="mob-nav-item mob-nav-crest" onclick="navigate('inicio')" id="mob-nav-crest"
+      aria-label="C.E.A. Man Césped - Escudo">
+      <div class="mob-crest-badge">
+        <div class="mob-crest-ring"></div>
+        <img src="img/escudo.png" alt="Escudo Oficial C.E.A. Man Césped" class="mob-crest-img" width="46" height="46">
+      </div>
+      <span class="mob-nav-label mob-crest-label">C.E.A.</span>
+    </a>
+
+    <!-- 4. TEST VOCACIONAL -->
+    <a href="javascript:void(0)" class="mob-nav-item" onclick="navigate('test')" id="mob-nav-test"
+      aria-label="Test Vocacional">
+      <div class="mob-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <circle cx="12" cy="12" r="6" />
+          <circle cx="12" cy="12" r="2" />
+        </svg>
+      </div>
+      <span class="mob-nav-label">Test</span>
+    </a>
+
+    <!-- 5. WHATSAPP DIRECTO A SECRETARÍA (72272179) -->
+    <a href="https://wa.me/59172272179?text=Hola%20Secretar%C3%ADa%20del%20CEA%20Man%20C%C3%A9sped,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20inscripciones%20y%20carreras."
+      target="_blank" rel="noopener noreferrer" class="mob-nav-item" id="mob-nav-wa"
+      aria-label="WhatsApp Secretaría Oficial">
+      <div class="mob-nav-icon mob-icon-wa">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+        </svg>
+      </div>
+      <span class="mob-nav-label">WhatsApp</span>
+    </a>
+  </nav>
+
+  <script src="app.js"></script>
+  <script>
+    function filterStaff(category, btn) {
+      document.querySelectorAll('.staff-filter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderStaff(category);
+    }
+  </script>
+</body>
+
+</html>
